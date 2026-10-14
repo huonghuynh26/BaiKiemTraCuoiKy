@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 608px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 50px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 18px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  padding: 16px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 4px;
+  background: #2f80ed;
+  border-radius: 4px 4px 0 0;
+}
+
+.add-form {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 18px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-form input:focus {
+  border-color: #2f80ed;
+}
+
+.add-form button {
+  width: 109px;
+  background: #2f80ed;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(127, 177, 243, 0.4);
+}
+
+.add-form button:hover {
+  background: #1c6ed8;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.task-label input {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #2f80ed;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #bdbdbd;
+  cursor: pointer;
+  display: flex;
+}
+
+.delete-btn:hover {
+  color: #eb5757;
+}
+
+.delete-all-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-all {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #eb5757;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 26px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-all:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
